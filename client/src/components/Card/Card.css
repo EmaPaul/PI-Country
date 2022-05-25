@@ -1,0 +1,37 @@
+.cardContainer {
+  background-image: url('../../Imagenes//tiling.gif');
+  border: solid;
+  width: 17vw;
+  height: 17rem;
+  margin: 1px 0 2px 0;
+  display: flex;
+  font-size: large;
+  color: rgb(0, 0, 0);
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+.infoConteiner {
+
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  justify-content: flex-end;
+  height: 50%;
+}
+
+.cardImg {
+  width: 30%;
+}
+
+.content {
+  margin: 1rem 0 0 0;
+}
+
+.buttonDelete {
+  background-color:black;
+  color: white;
+}
