@@ -6,10 +6,10 @@ export function getCountries() {
     return async function (dispatch) {
         
         axios.get('http://localhost:3001/countries').then(function (response) {
-                return dispatch({
-                type: GET_COUNTRIES,
-                payload: response.data
-            });
+            return dispatch({
+            type: GET_COUNTRIES,
+            payload: response.data
+        });
         }).catch(err=>console.log(err));
         
     }
@@ -17,16 +17,14 @@ export function getCountries() {
 
 export function searchCountries(search) {
     return async function (dispatch) {
-        try {
-            var json = await axios.get('http://localhost:3001/countries?name=' + search)
+        
+        axios.get('http://localhost:3001/countries?name=' + search).then(function (response) {
             return dispatch({
-                type: SEARCH_COUNTRIES,
-                payload: json.data
-            });
-        } catch (error) {
-            alert('El pais no fue encontrado')
-            console.log(error)
-        }
+            type: SEARCH_COUNTRIES,
+            payload: response.data
+        });
+        }).catch (err=>console.error(err))
+    
     }
 }
 

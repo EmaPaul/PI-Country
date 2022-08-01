@@ -115,7 +115,7 @@ export default function ActivityCreate() {
             <div className="inputActivities">
               <label></label>
               <input
-                className="i"
+                className="in"
                 type="text"
                 value={input.duration}
                 name="duration"
